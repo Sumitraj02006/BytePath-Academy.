@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BytePath Academy helps students learn technology through structured, practical, and career-focused learning. Apply now for Online, Offline, or Hybrid modes.">
+    <meta name="keywords" content="BytePath Academy, EdTech startup, Programming courses, Computer basics, MS Office, Web Development, C Programming, Data Structures, Admission Open">
+    <title>BytePath Academy - Build Your Digital Future | Learn • Build • Grow</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <!-- Background Glowing Blobs -->
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+    <div class="bg-glow blob-3"></div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container container">
+            <a href="#home" class="logo">
+                <div class="logo-icon logo-circle">
+                    <img src="logo.png" alt="BytePath Academy Logo">
+                </div>
+                <span>BytePath<span>Academy</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">Why Us</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#admission" class="nav-link">Admission</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#admission" class="nav-btn-mobile btn btn-primary">Apply Now</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#admission" class="nav-btn btn btn-primary">Apply Now</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content reveal fade-left">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    <span>Admissions Open</span>
+                </div>
+                <h1>Build Your <br><span class="gradient-text">Digital Future</span> <br>with BytePath</h1>
+                <p class="subtitle">From Computer Basics to Career Skills — Learn, Build and Grow with Structured, Practical Learning.</p>
+                <div class="hero-actions">
+                    <a href="#admission" class="btn btn-primary btn-glow">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#admission" class="btn btn-secondary" onclick="selectDemoClass()">Book Free Demo Class</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual reveal fade-right">
+                <div class="dashboard-mockup">
+                    <div class="window-header">
+                        <span class="window-dot red"></span>
+                        <span class="window-dot yellow"></span>
+                        <span class="window-dot green"></span>
+                        <span class="window-title">bytepath_academy.py</span>
+                    </div>
+                    <div class="code-editor">
+                        <pre><code><span class="code-keyword">from</span> bytepath <span class="code-keyword">import</span> <span class="code-class">Student</span>
+
+student = <span class="code-class">Student</span>()
+
+student.<span class="code-method">learn</span>(<span class="code-string">"Technology"</span>)
+student.<span class="code-method">build</span>(<span class="code-string">"Real Projects"</span>)
+student.<span class="code-method">grow</span>(<span class="code-string">"Career"</span>)
+
+<span class="code-method">print</span>(<span class="code-string">"BytePath Academy → Future Unlocked 🚀"</span>)</code></pre>
+                    </div>
+                </div>
+                
+                <!-- Display Highlights Grid -->
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon green">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>4 Levels</h4>
+                            <p>Structured Path</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon blue">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Practical</h4>
+                            <p>Hands-on Projects</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon purple">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Career-Focused</h4>
+                            <p>Job Readiness</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon yellow">
+                            <i class="fa-solid fa-house-laptop"></i>
+                        </div>
+                        <div class="highlight-info">
+                            <h4>Flexible</h4>
+                            <p>Online/Offline/Hybrid</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT BYTEPATH ACADEMY -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal fade-left">
+                    <h2 class="section-title">Why BytePath Academy?</h2>
+                    <p class="about-desc">At BytePath Academy, students learn technology through practical learning, guided instruction, and real-world skill development.</p>
+                    <p class="about-desc">We focus on building strong foundations, programming skills, and career readiness through structured learning paths. No placeholders, no outdated syllabus—only industry-relevant skills.</p>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-lbl">Practical Focus</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">Student Success</span>
+                            <span class="stat-lbl">Support</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">Flexible</span>
+                            <span class="stat-lbl">Learning Modes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-tagline-card reveal fade-right">
+                    <div class="tagline-glow"></div>
+                    <div class="tagline-content">
+                        <h3>Our Mission</h3>
+                        <div class="tagline-steps">
+                            <div class="tagline-step" data-step="1">
+                                <span class="step-num">01</span>
+                                <span class="step-word">Discover</span>
+                                <p>Explore new concepts, technologies, and possibilities.</p>
+                            </div>
+                            <div class="tagline-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </div>
+                            <div class="tagline-step" data-step="2">
+                                <span class="step-num">02</span>
+                                <span class="step-word">Create</span>
+                                <p>Turn ideas into practical solutions through hands-on implementation.</p>
+                            </div>
+                            <div class="tagline-arrow">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </div>
+                            <div class="tagline-step" data-step="3">
+                                <span class="step-num">03</span>
+                                <span class="step-word">Advance</span>
+                                <p>Move confidently toward higher achievements and future opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HACKATHON ACHIEVEMENTS SECTION -->
+    <section class="hackathon section-padding" id="achievements">
+        <div class="container">
+            <div class="hackathon-grid">
+                <div class="hackathon-image-wrapper reveal fade-left">
+                    <div class="image-glow"></div>
+                    <div class="hackathon-card-img">
+                        <img src="hackathon.jpg" alt="Problem Solving in India - Hackathon 2026 Evaluation Results">
+                    </div>
+                </div>
+                
+                <div class="hackathon-content reveal fade-right">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        <span>Innovation Showcase</span>
+                    </div>
+                    <h2 class="section-title">Problem Solving in India <br><span class="gradient-text">Hackathon 2026</span></h2>
+                    <p class="hackathon-desc">BytePath Academy successfully organized the national-level online hackathon, bringing together tech-innovators from colleges across India to solve critical real-world societal problems.</p>
+                    <p class="hackathon-desc">Our student participants built outstanding projects, with <strong>Rank #2 (Placement Tracker by Code Crafters)</strong> and <strong>Rank #3 (Book Rental by Creative Minds)</strong> leading the national evaluation results. We believe in building the future through practical innovation.</p>
+                    
+                    <div class="hackathon-highlights">
+                        <div class="h-stat">
+                            <span class="h-stat-num">Rank #2</span>
+                            <span class="h-stat-lbl">Placement Tracker</span>
+                        </div>
+                        <div class="h-stat">
+                            <span class="h-stat-num">Rank #3</span>
+                            <span class="h-stat-lbl">Book Rental System</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: LEARNING ROADMAP -->
+    <section class="roadmap section-padding" id="roadmap">
+        <div class="container">
+            <div class="section-header text-center reveal fade-up">
+                <span class="section-subtitle">Structured Curriculum</span>
+                <h2 class="section-title">Your Learning Roadmap</h2>
+                <p class="section-desc">Select the right path for your academic level and career objectives.</p>
+            </div>
+            
+            <div class="roadmap-timeline">
+                <div class="roadmap-line" id="roadmap-line">
+                    <div class="roadmap-line-progress" id="roadmap-progress"></div>
+                </div>
+                
+                <!-- LEVEL 1: FOUNDATION LEVEL -->
+                <div class="roadmap-item reveal fade-left" id="level-1">
+                    <div class="roadmap-dot">1</div>
+                    <div class="roadmap-card card-glow-blue">
+                        <div class="roadmap-card-header">
+                            <div class="level-badge level-1-badge">Level 1</div>
+                            <h3>Foundation Level</h3>
+                        </div>
+                        <div class="roadmap-card-body">
+                            <div class="suitable-for">
+                                <strong>Suitable For:</strong>
+                                <span>Class 6–8 Students</span>
+                            </div>
+                            <div class="topics-section">
+                                <strong>What you will learn:</strong>
+                                <div class="topic-tags">
+                                    <span class="tag">Computer Basics</span>
+                                    <span class="tag">Parts of Computer</span>
+                                    <span class="tag">Windows Basics</span>
+                                    <span class="tag">Paint & Notepad</span>
+                                    <span class="tag">Typing</span>
+                                    <span class="tag">Internet Basics</span>
+                                </div>
+                            </div>
+                            <div class="card-footer-info">
+                                <div class="info-pill"><i class="fa-regular fa-clock"></i> 1–2 Months</div>
+                                <div class="info-pill fee-pill"><i class="fa-solid fa-indian-rupee-sign"></i> 500–800 / Mo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 2: APPLICATION LEVEL -->
+                <div class="roadmap-item alt reveal fade-right" id="level-2">
+                    <div class="roadmap-dot">2</div>
+                    <div class="roadmap-card card-glow-purple">
+                        <div class="roadmap-card-header">
+                            <div class="level-badge level-2-badge">Level 2</div>
+                            <h3>Application Level</h3>
+                        </div>
+                        <div class="roadmap-card-body">
+                            <div class="suitable-for">
+                                <strong>Suitable For:</strong>
+                                <span>Class 9–12 Students • College Beginners • Non-Technical Students</span>
+                            </div>
+                            <div class="topics-section">
+                                <strong>What you will learn:</strong>
+                                <div class="topic-tags">
+                                    <span class="tag">MS Word</span>
+                                    <span class="tag">MS Excel</span>
+                                    <span class="tag">MS PowerPoint</span>
+                                    <span class="tag">Internet & Digital Tools</span>
+                                </div>
+                            </div>
+                            <div class="card-footer-info">
+                                <div class="info-pill"><i class="fa-regular fa-clock"></i> 60 Hours / 30 Classes</div>
+                                <div class="info-pill fee-pill"><i class="fa-solid fa-indian-rupee-sign"></i> 1200–1800 / Mo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 3: PROGRAMMING LEVEL -->
+                <div class="roadmap-item reveal fade-left" id="level-3">
+                    <div class="roadmap-dot">3</div>
+                    <div class="roadmap-card card-glow-pink">
+                        <div class="roadmap-card-header">
+                            <div class="level-badge level-3-badge">Level 3</div>
+                            <h3>Programming Level</h3>
+                        </div>
+                        <div class="roadmap-card-body">
+                            <div class="suitable-for">
+                                <strong>Suitable For:</strong>
+                                <span>BCA Students • BSc-IT Students • Polytechnic Students</span>
+                            </div>
+                            <div class="topics-section">
+                                <strong>What you will learn:</strong>
+                                <div class="topic-tags">
+                                    <span class="tag">C Programming</span>
+                                    <span class="tag">C++ Programming</span>
+                                    <span class="tag">Data Structures (Basic)</span>
+                                    <span class="tag">Practical File & Viva Preparation</span>
+                                </div>
+                            </div>
+                            <div class="card-footer-info">
+                                <div class="info-pill"><i class="fa-regular fa-clock"></i> 90 Hours / 45 Classes</div>
+                                <div class="info-pill fee-pill"><i class="fa-solid fa-indian-rupee-sign"></i> 2500–4000 / Course</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEVEL 4: SKILL & CAREER LEVEL -->
+                <div class="roadmap-item alt reveal fade-right" id="level-4">
+                    <div class="roadmap-dot">4</div>
+                    <div class="roadmap-card card-glow-cyan">
+                        <div class="roadmap-card-header">
+                            <div class="level-badge level-4-badge">Level 4</div>
+                            <h3>Skill & Career Level</h3>
+                        </div>
+                        <div class="roadmap-card-body">
+                            <div class="suitable-for">
+                                <strong>Suitable For:</strong>
+                                <span>Final Year Students • Job Seekers • Career-Oriented Learners</span>
+                            </div>
+                            <div class="topics-section">
+                                <strong>What you will learn:</strong>
+                                <div class="topic-tags">
+                                    <span class="tag">Web Development</span>
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Mini Projects</span>
+                                    <span class="tag">Resume Building</span>
+                                    <span class="tag">Interview Preparation</span>
+                                </div>
+                            </div>
+                            <div class="card-footer-info">
+                                <div class="info-pill"><i class="fa-regular fa-clock"></i> 120 Hours / 60 Classes</div>
+                                <div class="info-pill fee-pill"><i class="fa-solid fa-indian-rupee-sign"></i> 7000–12000 / Course</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: WHY CHOOSE BYTEPATH ACADEMY -->
+    <section class="features section-padding" id="features">
+        <div class="container">
+            <div class="section-header text-center reveal fade-up">
+                <span class="section-subtitle">Key Features</span>
+                <h2 class="section-title">Why Choose BytePath Academy?</h2>
+                <p class="section-desc">Experience an EdTech platform built around real-world mastery and progress.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature 1: Practical Hands-On Training -->
+                <div class="feature-card reveal fade-up" data-delay="0.1">
+                    <div class="feature-icon bg-purple-trans">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3>Practical Hands-On Training</h3>
+                    <p>Learn by doing. Less lecturing, more building, compiling, and testing code on actual setups.</p>
+                </div>
+                <!-- Feature 2: Project-Based Learning -->
+                <div class="feature-card reveal fade-up" data-delay="0.2">
+                    <div class="feature-icon bg-cyan-trans">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h3>Project-Based Learning</h3>
+                    <p>Build mini and major projects to build a robust portfolio that stands out in job applications.</p>
+                </div>
+                <!-- Feature 3: Industry-Relevant Skills -->
+                <div class="feature-card reveal fade-up" data-delay="0.3">
+                    <div class="feature-icon bg-pink-trans">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3>Industry-Relevant Skills</h3>
+                    <p>Learn technologies that are actively used in the industry today, with zero outdated syllabus.</p>
+                </div>
+                <!-- Feature 4: Structured Learning Roadmap -->
+                <div class="feature-card reveal fade-up" data-delay="0.4">
+                    <div class="feature-icon bg-orange-trans">
+                        <i class="fa-solid fa-map-signs"></i>
+                    </div>
+                    <h3>Structured Learning Roadmap</h3>
+                    <p>Never feel lost. Clear milestones lead you smoothly from foundation concepts to career roles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: ADMISSION FORM & CONTACT -->
+    <section class="admission section-padding" id="admission">
+        <div class="container">
+            <div class="admission-grid">
+                <!-- Contact info cards -->
+                <div class="contact-info-panel reveal fade-left">
+                    <div class="section-header">
+                        <span class="section-subtitle">Get in Touch</span>
+                        <h2 class="section-title">Admission Enquiry</h2>
+                        <p class="section-desc">Have questions about our syllabus, timing, or fees? Reach out to our team or request a demo class.</p>
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-comments"></i></div>
+                            <div class="contact-text">
+                                <h4>How to Connect</h4>
+                                <p>Please reach out to us via Email or connect through our Social Media channels below.</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:sumitrajkumarsingh6@gmail.com">sumitrajkumarsingh6@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-text">
+                                <h4>Academy Location</h4>
+                                <p>Headquarters: New Delhi, Delhi (Remote-first training academy)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-channels" id="socials">
+                        <h4>Follow Us on Social Media</h4>
+                        <div class="social-cards">
+                            <a href="https://www.linkedin.com/company/bytepathacademy/" target="_blank" class="social-card linkedin">
+                                <div class="icon-brand"><i class="fa-brands fa-linkedin-in"></i></div>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.instagram.com/bytepathacademy" target="_blank" class="social-card instagram">
+                                <div class="icon-brand"><i class="fa-brands fa-instagram"></i></div>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/share/1S525ykoEz/" target="_blank" class="social-card facebook">
+                                <div class="icon-brand"><i class="fa-brands fa-facebook-f"></i></div>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://x.com/bytepath99264" target="_blank" class="social-card twitter">
+                                <div class="icon-brand">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display: block;">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                    </svg>
+                                </div>
+                                <span>X</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="admission-form-wrapper reveal fade-right" id="contact">
+                    <div class="form-container-card">
+                        <div class="form-header">
+                            <h3>Apply For Admission</h3>
+                            <p>Fill out the form and our team will contact you shortly.</p>
+                        </div>
+                        
+                        <form id="admission-form" class="admission-form" novalidate>
+                            <!-- Hidden Timestamp element, auto generated on form submit -->
+                            <input type="hidden" id="form-timestamp" name="Timestamp">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Full Name <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-regular fa-user input-icon"></i>
+                                        <input type="text" id="form-name" name="Name" placeholder="John Doe" required>
+                                    </div>
+                                    <span class="validation-message" id="name-error"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row split">
+                                <div class="form-group">
+                                    <label for="form-mobile">Mobile Number <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-phone input-icon"></i>
+                                        <input type="tel" id="form-mobile" name="Mobile" placeholder="10-digit mobile" required>
+                                    </div>
+                                    <span class="validation-message" id="mobile-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Email Address <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-regular fa-envelope input-icon"></i>
+                                        <input type="email" id="form-email" name="Email" placeholder="name@domain.com" required>
+                                    </div>
+                                    <span class="validation-message" id="email-error"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-qualification">Qualification <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-graduation-cap input-icon"></i>
+                                        <input type="text" id="form-qualification" name="Qualification" placeholder="e.g. Class 10, BCA 2nd Year, Graduate" required>
+                                    </div>
+                                    <span class="validation-message" id="qualification-error"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row split">
+                                <div class="form-group">
+                                    <label for="form-course">Select Course <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-book-open input-icon"></i>
+                                        <select id="form-course" name="Course" required>
+                                            <option value="" disabled selected>Choose Course</option>
+                                            <option value="Level 1 Foundation Level">Level 1 Foundation Level</option>
+                                            <option value="Level 2 Application Level">Level 2 Application Level</option>
+                                            <option value="Level 3 Programming Level">Level 3 Programming Level</option>
+                                            <option value="Level 4 Skill & Career Level">Level 4 Skill & Career Level</option>
+                                        </select>
+                                    </div>
+                                    <span class="validation-message" id="course-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-mode">Learning Mode <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fa-solid fa-location-arrow input-icon"></i>
+                                        <select id="form-mode" name="Mode" required>
+                                            <option value="" disabled selected>Choose Mode</option>
+                                            <option value="Online">Online</option>
+                                            <option value="Offline">Offline</option>
+                                            <option value="Hybrid">Hybrid</option>
+                                        </select>
+                                    </div>
+                                    <span class="validation-message" id="mode-error"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-message">Message</label>
+                                    <div class="input-wrapper text-area-wrapper">
+                                        <i class="fa-regular fa-comment-dots input-icon"></i>
+                                        <textarea id="form-message" name="Message" rows="3" placeholder="Tell us about your learning goal or ask questions..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit State Feedback Overlays -->
+                            <div class="form-message-banner success" id="form-success-banner">
+                                <div class="success-icon-wrapper">
+                                    <svg viewBox="0 0 52 52">
+                                        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                                        <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                    </svg>
+                                </div>
+                                <p>Application submitted successfully. Our admission team will contact you shortly.</p>
+                            </div>
+
+                            <div class="form-message-banner error" id="form-error-banner">
+                                <i class="fa-solid fa-circle-exclamation error-icon"></i>
+                                <span class="error-msg-text">Failed to submit application. Please try again.</span>
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-full btn-glow">
+                                <span class="btn-text">Apply For Admission</span>
+                                <span class="btn-loader"><i class="fa-solid fa-spinner fa-spin"></i> Submitting...</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <div class="logo-icon logo-circle">
+                        <img src="logo.png" alt="BytePath Academy Logo">
+                    </div>
+                    <span>BytePath<span>Academy</span></span>
+                </a>
+                <p class="tagline">Learn • Build • Grow</p>
+                <p class="desc">Building Future Tech Professionals Through Practical Learning.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Why Us</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#features">Key Features</a></li>
+                    <li><a href="#admission">Admissions</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-courses">
+                <h4>Our Curriculum</h4>
+                <ul>
+                    <li><a href="#roadmap">Level 1: Foundation</a></li>
+                    <li><a href="#roadmap">Level 2: Applications</a></li>
+                    <li><a href="#roadmap">Level 3: Programming</a></li>
+                    <li><a href="#roadmap">Level 4: Skill & Career</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>Admission Support</h4>
+                <p class="call-action"><i class="fa-regular fa-envelope"></i> <a href="mailto:sumitrajkumarsingh6@gmail.com">Email Us</a></p>
+                <p class="working-hours">Response time: Within 24 Hours</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p class="copyright">Copyright &copy; 2026 BytePath Academy. All Rights Reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/company/bytepathacademy/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/bytepathacademy" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1S525ykoEz/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://x.com/bytepath99264" target="_blank" aria-label="X">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="display: inline-block; vertical-align: middle;">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
