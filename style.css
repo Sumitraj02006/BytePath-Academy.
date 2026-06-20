@@ -97,6 +97,18 @@ h1, h2, h3, h4, h5, h6 {
     padding: 6rem 0;
 }
 
+/* Global responsive layout safeguards */
+.hero, .about, .hackathon, .roadmap, .features, .admission {
+    overflow: hidden;
+}
+
+.hero-grid > *,
+.about-grid > *,
+.hackathon-grid > *,
+.admission-grid > * {
+    min-width: 0;
+}
+
 .text-center {
     text-align: center;
 }
@@ -490,6 +502,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.85rem;
     line-height: 1.6;
     overflow-x: auto;
+}
+
+.code-editor pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .code-keyword { color: #f472b6; }
@@ -1682,6 +1700,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    /* Container spacing */
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    /* Headings line-break overrides */
+    .hero-content h1 br,
+    .section-title br {
+        display: none;
+    }
+
     /* Navbar Collapse toggle */
     .menu-toggle {
         display: flex;
@@ -1765,22 +1794,22 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
     
-    /* Hackathon layouts */
+    /* Hackathon layouts - aligned left for layout consistency */
     .hackathon-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
-        text-align: center;
+        text-align: left;
     }
     
     .hackathon-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
     
     .hackathon-highlights {
-        justify-content: center;
-        gap: 2rem;
+        justify-content: flex-start;
+        gap: 2.5rem;
     }
     
     /* Roadmap layout conversions - flat vertical timeline */
@@ -1811,6 +1840,10 @@ h1, h2, h3, h4, h5, h6 {
         left: 2px !important;
         right: auto !important;
     }
+
+    .roadmap-card {
+        padding: 1.5rem;
+    }
     
     /* Features layouts */
     .features-grid {
@@ -1828,6 +1861,13 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@media (max-width: 640px) {
+    .form-row.split {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 580px) {
     .section-title {
         font-size: 1.85rem;
@@ -1841,18 +1881,13 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
     
-    .form-row.split {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
     .highlights-grid {
         grid-template-columns: 1fr;
     }
     
     .stats-row {
-        gap: 1.5rem;
-        justify-content: space-between;
+        gap: 2rem;
+        justify-content: flex-start;
     }
     
     .stat-num {
@@ -1875,5 +1910,57 @@ h1, h2, h3, h4, h5, h6 {
     
     .form-container-card {
         padding: 2rem 1.5rem;
+    }
+
+    /* Staggered Tagline mission card padding adjustments */
+    .about-tagline-card {
+        padding: 2rem 1.25rem;
+    }
+    
+    .tagline-step {
+        gap: 0.75rem;
+    }
+    
+    .tagline-step .step-word {
+        width: 70px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Small logo sizing to prevent hamburger collision */
+    .logo {
+        font-size: 1.15rem;
+        gap: 0.4rem;
+    }
+    
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Roadmap Timeline space-saving tweaks on very small viewports */
+    .roadmap-card {
+        padding: 1.25rem 1rem;
+    }
+    
+    .roadmap-line {
+        left: 15px;
+    }
+    
+    .roadmap-dot {
+        width: 30px;
+        height: 30px;
+        font-size: 0.85rem;
+        left: 2px !important;
+    }
+    
+    .roadmap-item {
+        padding-left: 2.75rem;
+        margin-bottom: 2rem;
     }
 }
