@@ -1733,19 +1733,31 @@ h1, h2, h3, h4, h5, h6 {
     /* Hero section layouts */
     .hero-grid {
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: left;
         gap: 3.5rem;
     }
     
     .hero-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
     
     .hero-content .subtitle {
-        margin-left: auto;
+        margin-left: 0;
         margin-right: auto;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 320px;
     }
     
     /* About layouts */
